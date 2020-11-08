@@ -20,15 +20,11 @@ class Dementor {
   }
 
   show() {
-    // fill(220,220,255,2);
-    // ellipse(this.pos.x,this.pos.y,this.r*15);
-    //
-    // fill(0, 150);
-    // ellipse(this.pos.x, this.pos.y, this.r * 2);
-      //
-      // let myDegrees = mouseX
-      // let v = p5.Vector.fromAngle(radians(myDegrees));
-      stroke(255);
-      bezier(this.pos.x,this.pos.y,this.pos.x,this.pos.y+200,this.pos.x+50,this.pos.y+200,this.pos.x+50,this.pos.y);
+    fill(220,220,255,2);
+    ellipse(this.pos.x,this.pos.y,this.r*15);
+  
+    fill(0, 150);
+    ellipse(this.pos.x, this.pos.y, this.r * 2);
+    
   }
 }

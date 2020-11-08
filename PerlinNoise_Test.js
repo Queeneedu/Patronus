@@ -1,23 +1,22 @@
-let inc = 0.1;
-let scl = 10;
-let cols, rows;
-let zoff = 0;
-let particles = [];
-let flowfield;
-function setup() {
-  createCanvas(1280, 720);
-  cols = floor(width/scl);
-  rows = floor(height/scl);
-
-  flowfield = new Array(cols*rows);
-  for (let i = 0; i<10000; i++){
-    particles[i] = new Particle();
+class PerlinTest {
+  constructor(){
+    let scl = 10;
+    let cols, rows;
+    let zoff = 0;
+    let particles = [];
+    let flowfield;
+    let w = 200;
+    let h = 80;
+    // createCanvas(1280, 720);
+    cols = floor(w/scl);
+    rows = floor(h/scl);
+    flowfield = new Array(cols*rows);
+    for (let i = 0; i<1000; i++){
+      particles[i] = new Particle();
+    }
   }
-  background(200);
-}
 
-function draw() {
-  // background(255);
+  update(){
   let yoff = 0;
   for (let y = 0; y<rows; y++){
     let xoff = 0;
@@ -44,6 +43,6 @@ function draw() {
       particles[i].update();
       particles[i].edges();
       particles[i].show();
-
     }
   }
+}
